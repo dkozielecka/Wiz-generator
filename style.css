@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #394854;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.wizz {
+  position: absolute;
+  height: 348px;
+  width: calc(1600px / 6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(img/wiz.png);
+  animation: animate 0.8s steps(6) infinite;
+}
+@keyframes animate {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -1600px;
+  }
+}
+.start {
+  width: 80%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.boy,
+.girl {
+  font-size: 4rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  background-color: #afb3b2;
+  border: 3px solid #21252a;
+  color: #21252a;
+  border-radius: 2%;
+  padding: 1rem 2rem;
+  transition: 0.4s linear;
+}
+.boy:hover,
+.girl:hover {
+  background-color: #21252a;
+  border: 3px solid #afb3b2;
+  color: #afb3b2;
+  cursor: pointer;
+}
+
+.answer__box {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  width: 60%;
+  text-align: center;
+  font-size: 3rem;
+  border: 2px solid #afb3b2;
+  color: #394854;
+  background-color: #21252a;
+  padding: 0.5rem 2rem;
+  line-height: 3rem;
+}
+
+.name {
+  font-style: italic;
+  color: #afb3b2;
+}
